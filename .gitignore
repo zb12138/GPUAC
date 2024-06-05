@@ -1,0 +1,7 @@
+/data
+.vscode
+__pycache__
+*.rec
+*.bin
+*.o
+*.csv
