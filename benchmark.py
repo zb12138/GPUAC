@@ -128,11 +128,10 @@ if __name__ == '__main__':
                             "entropy": entropy/symsNum, "arcodeGpu": gpuAc_t/symsT,"arcodeCpu": cpuAc_t/symsT, "torchAc":  torchAc_t/symsT, "torchAcw/io":gpuAc_woIO_t, "yaecl": yaecl_t/symsT}
                 
                 printFun(result)
-                results.append(result)
+                results.append(result)    
 
-        table = pd.DataFrame(results).round(4)
-        table = table.append(table.mean(numeric_only=True),ignore_index=True)
-        table.iloc[-1,0] = 'ave'#
-        table = table.round(3)
-        table.to_csv('entropy_coder{}.csv'.format(dim))
-        print(table)
+        results = pd.DataFrame(results) 
+        results.loc[len(results)] = results.mean(numeric_only=True)
+        results.iloc[-1,0] = 'ave'#
+        results = results.round(3)
+        print(results)

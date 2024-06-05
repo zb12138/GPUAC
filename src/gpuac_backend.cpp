@@ -109,7 +109,7 @@ int ac_codec(const char *inputName, const char *outputName, symb_t *symbs, proba
             delete compressor;
             compressor = NULL;
             monitor = NULL;
-            return info.compressedFileSize * 8;
+            return info.compressedFileSize;
         }
     }
     catch (char *e)
