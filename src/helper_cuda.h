@@ -765,6 +765,7 @@ inline int _ConvertSMVer2Cores(int major, int minor)
         { 0x86, 128 }, // Ampere Generation (SM 8.6) GA10x
         { 0x89, 128 }, // Ada Lovelace Generation (SM 8.9) AD10x
         { 0x90, 128 }, // Hopper Generation (SM 9.0) GH100
+        { 0x8C, 128 }, // Ada Lovelace Generation (SM 8.9) RTX 4090
         {   -1, -1 }
         };
 
