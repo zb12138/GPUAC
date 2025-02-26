@@ -44,7 +44,7 @@ int ac_codec(const char *inputName, const char *outputName, symb_t *symbs, proba
             {
                 cudaGetDeviceCount(&numDevices);
                 if (interactive)
-                    printf("Fund %d devices. \n", numDevices);
+                    printf("Found %d devices. \n", numDevices);
                 if (numDevices == 0)
                 {
                     printf("Warnning, no GPU found, run on CPU. \n");
